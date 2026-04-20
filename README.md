@@ -1,49 +1,63 @@
-Workflow Builder
+# Workflow Builder
 
-A web-based workflow editor that allows users to visually create, configure, and simulate business workflows using a node-based interface.
+Live Demo: [Open Application](https://workflow-designer-silk.vercel.app/)
 
-Features
-Drag-and-drop style node creation (Start, Task, Approval, Automated, End)
-Connect nodes to define workflow logic
-Dynamic configuration panel based on node type
-Task: assign user
-Approval: define role
-Automated: configure email details
-Delete individual nodes and clear entire workflow
-Workflow simulation with step-by-step execution
-Validation for missing Start/End nodes
-Visual execution highlighting
-Dark and light mode support
-Tech Stack
-React (Vite)
-TypeScript
-Zustand (state management)
-React Flow (graph rendering)
-Architecture Overview
-Global state managed using Zustand
-Nodes and edges stored centrally
-selectedNodeId used to avoid stale state issues
-Config panel derives node data from store
-Simulation runs asynchronously and updates UI step-by-step
-How to Run
+A visual workflow builder with dynamic forms, validation, and execution simulation.
+
+---
+
+## Features
+
+- Add and connect nodes (Start, Task, Approval, Automated, End)
+- Drag and reposition nodes on a canvas
+- Dynamic configuration panel based on node type
+- Delete individual nodes and clear entire workflow
+- Workflow simulation with step-by-step execution
+- Validation for missing Start and End nodes
+- Visual execution highlighting during simulation
+- Dark and light mode support
+
+---
+
+## Tech Stack
+
+- React (Vite)
+- TypeScript
+- Zustand (state management)
+- React Flow
+
+---
+
+## Architecture Overview
+
+- Centralized state using Zustand
+- Nodes and edges stored globally
+- selectedNodeId avoids stale state issues
+- Config panel derives data from store
+- Simulation runs asynchronously with step-by-step updates
+
+---
+
+## How to Run Locally
+
+```bash
 npm install
 npm run dev
+```
 
-Open http://localhost:5173
- in your browser.
+## Usage
 
-Usage
-Add nodes from the left sidebar
-Connect nodes by dragging edges
-Click a node to edit its properties on the right panel
-Run the workflow using the "Run Workflow" button
-Use "Clear All" to reset the canvas
-Notes
-Automated nodes simulate an API call
-Execution order is based on defined connections
-UI is designed for clarity and ease of use
-Future Improvements
-Save/load workflows
-Export workflow as JSON
-Enhanced validation for complex flows
-Role-based execution logic
+- Add nodes from the sidebar
+- Connect nodes to define workflow order
+- Click a node to edit its properties
+- Run the workflow to simulate execution
+- Use Clear All to reset the canvas
+
+---
+
+## Future Improvements
+
+- Save and load workflows
+- Export workflow as JSON
+- Advanced validation for complex flows
+- Improved execution logic
